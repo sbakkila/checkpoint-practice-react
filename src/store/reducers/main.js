@@ -13,7 +13,15 @@ export default (state = initialState, action) => {
   switch (action.type){
     case 'SET_MAMMAL':
       return Object.assign({}, state, {
-        animal: action.animal
+        selectedMammal: action.animal
+      })
+    case 'SET_BIRD':
+      return Object.assign({}, state, {
+        selectedBird: action.animal
+      })
+    case 'SET_FISH':
+      return Object.assign({}, state, {
+        selectedFish: action.animal
       })
   }
   return state;
